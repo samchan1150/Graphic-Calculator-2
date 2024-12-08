@@ -35,6 +35,11 @@ function drawGraph() {
     const scaleX = canvas.width / (xMax - xMin);
     const scaleY = canvas.height / (yMax - yMin);
 
+    // Increase the number of samples
+    const steps = canvas.width * 10; // You can adjust the multiplier
+    const dx = (xMax - xMin) / steps;
+
+
     // Draw gridlines and axes
     drawGridlines(ctx, scaleX, scaleY);
     drawAxes(ctx, scaleX, scaleY);
@@ -45,7 +50,7 @@ function drawGraph() {
     ctx.lineWidth = 2;
 
     let firstPoint = true;
-    for (let pixelX = 0; pixelX <= canvas.width; pixelX++) {
+    for (let pixelX = 0; pixelX <= canvas.width; pixelX+=dx) {
         // Convert pixel x-coordinate to mathematical x-coordinate
         const x = xMin + (pixelX / canvas.width) * (xMax - xMin);
 
