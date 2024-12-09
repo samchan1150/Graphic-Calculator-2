@@ -32,4 +32,16 @@ The Graphic Calculator app is a web-based tool designed to plot mathematical equ
 - The app iterates over each pixel along the x-axis, converts it to a mathematical x-coordinate, evaluates the equation, and plots the corresponding y-coordinate.
 - It handles non-finite values and ensures that points outside the canvas are not drawn.
 
+### Finding Y Value with X Value
+
+- The `calculateYValue` function allows users to input an x value and find the corresponding y value on the graph.
+- It evaluates the equation at the given x value and displays the y value with two decimal places.
+- The graph view is adjusted to center on the (x, y) point.
+
+### Showing Coordinates
+
+- The `showCoordinates` function displays the coordinates of the point on the graph closest to the mouse cursor.
+- It samples points around the mouse position, finds the closest point on the graph, and displays the coordinates near the point.
+- A small circle is drawn at the closest point on the graph to indicate the location.
+
 This setup allows users to visualize mathematical functions interactively, making it a useful tool for educational purposes or quick graphing needs.
