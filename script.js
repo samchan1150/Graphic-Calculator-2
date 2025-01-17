@@ -364,3 +364,4 @@ canvas.addEventListener('mouseleave', function () {
 });
 
 canvas.addEventListener('mousemove', showCoordinates);
+
